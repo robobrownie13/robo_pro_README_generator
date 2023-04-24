@@ -16,6 +16,11 @@ const promptUser = () => {
     },
     {
       type: "input",
+      name: "usage",
+      message: "Type a detailed usage description.",
+    },
+    {
+      type: "input",
       name: "installation_instructions",
       message: "Type a detailed installation guide.",
     },
@@ -53,7 +58,7 @@ const promptUser = () => {
     {
       type: "input",
       name: "github",
-      message: "Enter your github profile link.",
+      message: "Enter your github username",
     },
   ]);
 };
