@@ -10,3 +10,7 @@ creating a markdown file for them to view and copy to their project repositories
 ## Link to Sample Generated README
 
 https://github.com/robobrownie13/demo_README_generated/blob/main/ROBO_DEMO_README.md
+
+## Link to Video Demonstration
+
+https://drive.google.com/file/d/1LySqk0xDTuWpqGPPYzvz20lEjvENfcB7/view
