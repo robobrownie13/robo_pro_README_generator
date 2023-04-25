@@ -38,17 +38,7 @@ const promptUser = () => {
       type: "list",
       name: "license_options",
       message: "Which license will you use for this project?",
-      choices: [
-        "Apache License 2.0",
-        "GNU General Public License v3.0",
-        "MIT License",
-        'BSD 2-Clause "Simplified" License',
-        'BSD 3-Clause "New" or "Revised" License',
-        "Boost Software License 1.0",
-        "Creative Commons Zero v1.0 Universal",
-        "Eclipse Public License 2.0",
-        "GNU Affero General Public License v3.0",
-      ],
+      choices: ["Apache-2.0", "EPL-1.0", "MIT", "BSD-3-Clause"],
     },
     {
       type: "input",
@@ -69,23 +59,12 @@ const init = () => {
     // a callback function
     .then((data) =>
       writeFile(
-        `${data.project_title.toLowerCase().split(" ").join("")}_README.md`,
+        `${data.project_title.toUpperCase().split(" ").join("")}_README.md`,
         generateMarkdown(data)
       )
     )
-    .then(() => console.log("Successfully wrote to markdown file!"))
+    .then(() => console.log("Successfully created markdown file!"))
     .catch((err) => console.error(err));
 };
 
 init();
-
-//   .then((data) => {
-//     const filename = `${data.project_title
-//       .toLowerCase()
-//       .split(" ")
-//       .join("")}.md`;
-
-//     fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-//       err ? console.log(err) : console.log("Success!")
-//     );
-//   });
